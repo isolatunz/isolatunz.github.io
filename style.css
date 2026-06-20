@@ -115,3 +115,7 @@ h2 {
 .card h3 {
     margin-top: 0;
 }
+.logo img {
+    height: 55px;
+    width: auto;
+}
