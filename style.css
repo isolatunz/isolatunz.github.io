@@ -139,32 +139,27 @@ h2 {
     color: #555;
 }
 
-.hero-circle {
-    width: 500px;
-    height: 500px;
+.hero-logo-circle {
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
     background: linear-gradient(
         135deg,
-        #3971b8,
-        #c8d69b
-    );
-}
-.hero-circle {
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    background: linear-gradient(
-        135deg,
-        #3971b8,
-        #c8d69b
+        #4d8df5,
+        #b8d89d
     );
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
-.hero-circle img {
-    width: 70%;
+.hero-logo-circle img {
+    width: 75%;
     height: auto;
+    object-fit: contain;
 }
