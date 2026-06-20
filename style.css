@@ -197,8 +197,15 @@ h2 {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 4.5rem;
     }
+    .hero-description {
+    font-size: 1.3rem;
+}
+
+.nav-links a {
+    font-size: 1.1rem;
+}
 
     .hero-shape {
         width: 250px;
