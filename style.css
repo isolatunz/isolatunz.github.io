@@ -1,6 +1,10 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: #fff7fb;
+    background: linear-gradient(
+    to bottom,
+    #fff7fb,
+    #f8fbff
+);
     color: #4b4b4b;
     text-align: center;
     padding: 50px;
