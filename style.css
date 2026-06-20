@@ -270,27 +270,7 @@ h2 {
     .footer h3 {
     color: #3971b8;
 }
- .status-open,
-.status-soon,
-.status-closed {
-    color: white;
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 600;
-}
-
-.status-open {
-    background: #2e8b57;
-}
-
-.status-soon {
-    background: #d4a017;
-}
-
-.status-closed {
-    background: #d9534f;
-}
+ 
 
 .program-item {
     background: white;
@@ -313,4 +293,25 @@ h2 {
     padding: 12px 24px;
     border-radius: 50px;
     font-weight: 500;
+}
+.status-open,
+.status-soon,
+.status-closed {
+    color: white;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.status-open {
+    background: #2e8b57;
+}
+
+.status-soon {
+    background: #d4a017;
+}
+
+.status-closed {
+    background: #d9534f;
 }
