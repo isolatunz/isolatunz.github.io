@@ -226,4 +226,6 @@ h2 {
         width: 100%;
         max-width: 320px;
     }
+.small-title {
+    color: #3971b8 !important;
 }
