@@ -167,6 +167,26 @@ Explore jobs, internships, college prep and volunteer opportunities.
 <p>© 2026 NextStepNYC</p>
 </footer>
     <script>
+        function searchPrograms() {
+
+    let input = document.querySelector('.search-bar');
+    let filter = input.value.toLowerCase();
+
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+
+        let text = card.textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+
+    });
+
+}
 function filterPrograms(category, button) {
 
     let cards = document.querySelectorAll('.card');
