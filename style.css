@@ -181,7 +181,16 @@ h2 {
     font-weight: 800;
     margin-bottom: 25px;
 }
-    
+ .program-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #3971b8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+}   
 @media (max-width: 768px) {
 
     nav {
@@ -284,16 +293,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-.program-link {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    background: #3971b8;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 500;
-}
 .status-open,
 .status-soon,
 .status-closed {
@@ -314,4 +313,14 @@ h2 {
 
 .status-closed {
     background: #d9534f;
+}
+    .programs-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+    .footer {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
 }
