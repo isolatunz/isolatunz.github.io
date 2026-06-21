@@ -184,6 +184,16 @@ button:hover {
 .about-intro {
     max-width: 750px;
 }
+.search-bar {
+    width: 400px;
+    max-width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
 
 /* =========================
    PROGRAMS PAGE
