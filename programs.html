@@ -31,13 +31,13 @@
 </p>
 <input type="text" placeholder="Search programs...">
     <div class="categories">
- <button>All</button>
-<button>STEM</button>
-<button>College Prep</button>
-<button>Jobs</button>
- <button>Leadership</button>
- <button>Volunteer</button>
-    </div>
+    <button onclick="filterPrograms('all')">All</button>
+    <button onclick="filterPrograms('stem')">STEM</button>
+    <button onclick="filterPrograms('college-prep')">College Prep</button>
+    <button onclick="filterPrograms('jobs')">Jobs</button>
+    <button onclick="filterPrograms('leadership')">Leadership</button>
+    <button onclick="filterPrograms('volunteer')">Volunteer</button>
+</div>
 <h2>Featured Programs</h2>
     <p class="program-subtitle">
 Explore jobs, internships, college prep and volunteer opportunities.
@@ -164,5 +164,25 @@ Explore jobs, internships, college prep and volunteer opportunities.
 <p>📸 @officialNSNYC</p>
 <p>© 2026 NextStepNYC</p>
 </footer>
+      <script>
+function filterPrograms(category) {
+
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+
+        if (
+            category === 'all' ||
+            card.dataset.category === category
+        ) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+
+    });
+
+}
+</script>  
 </body>
 </html>
