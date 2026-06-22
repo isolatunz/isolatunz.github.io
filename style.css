@@ -355,7 +355,11 @@ button:hover {
 
 .nyu-logo {
     height: 80px;
+
+.card {
+    width: 360px;
 }
+   }
    .categories button.active {
     background: #3971b8;
     color: white;
@@ -386,8 +390,4 @@ button:hover {
 
 .resource-topic:hover {
     color: #3971b8;
-}
-
-.card {
-    width: 360px;
 }
