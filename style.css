@@ -392,3 +392,12 @@ button:hover {
 .resource-topic:hover {
     color: #3971b8;
 }
+   .resource-topic {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-topic:hover {
+    color: #3971b8;
+}
