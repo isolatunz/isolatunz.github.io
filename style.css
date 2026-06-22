@@ -389,3 +389,11 @@ button:hover {
         height: 80px;
     }
 }
+.article-banner {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    margin: 25px auto 40px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
