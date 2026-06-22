@@ -398,6 +398,6 @@ button:hover {
     font-weight: 500;
 }
 
-.resource-topic:hover {
-    color: #3971b8;
+.resource-cards .card {
+    width: 350px;
 }
