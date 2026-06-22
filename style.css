@@ -101,8 +101,8 @@ button:hover {
 }
 
 .hero-shape {
-    width: 450px;
-    height: 450px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     background: linear-gradient(
         135deg,
