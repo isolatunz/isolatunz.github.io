@@ -403,6 +403,8 @@ button:hover {
     padding: 30px;
     border-radius: 25px;
     margin: 40px 0;
+   max-width: 700px;
+   margin: 40px auto;
 
     display: flex;
     align-items: center;
@@ -419,3 +421,4 @@ button:hover {
     margin-top: 0;
     margin-bottom: 10px;
 }
+
