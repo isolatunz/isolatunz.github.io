@@ -423,4 +423,8 @@ button:hover {
     margin-top: 0;
     margin-bottom: 10px;
 }
-
+.anxiety-list li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+}
