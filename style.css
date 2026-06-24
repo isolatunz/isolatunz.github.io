@@ -507,6 +507,9 @@ li {
 .resource-card p {
    flex-grow: 1;
 }
+.support-box{
+    margin: 50px 0 80px;
+}
 /* your current css */
 
 /* MOBILE FIXES FOR ANXIETY PAGE */
@@ -536,3 +539,4 @@ li {
     }
 
 }
+
