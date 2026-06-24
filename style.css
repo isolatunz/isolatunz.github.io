@@ -519,7 +519,6 @@ li {
 }
 .about-banner {
     width: 100%;
-    text-align: center;
     margin: 20px 0 50px;
 }
 
@@ -528,7 +527,7 @@ li {
     max-width: 1200px;
     border-radius: 20px;
     display: block;
-    margin: 0 auto;
+    margin: 0;
 }
 /* your current css */
 
