@@ -439,9 +439,14 @@ li {
 }
 .section-divider {
     border: none;
-    height: 1px;
-    background: #e5e7eb;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #3971b8,
+        #c8d69b
+    );
     margin: 50px 0;
+    border-radius: 999px;
 }
 .resource-grid {
     display: grid;
@@ -481,5 +486,9 @@ li {
 }
 .resource-card {
     height: 100%;
+}
+.back-button {
+    text-align: center;
+    margin-top: 40px;
 }
 
