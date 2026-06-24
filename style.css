@@ -496,10 +496,5 @@ li {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
 
-    display: flex;
-    flex-direction: column;
+   min-height: 40px;
 }
-.resource-card p {
-    flex-grow: 1;
-}
-
