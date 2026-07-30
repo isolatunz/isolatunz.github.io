@@ -2,11 +2,17 @@
    GENERAL
 ========================= */
 
+html {
+    min-height: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: 100vh;
     color: #222;
 }
 
