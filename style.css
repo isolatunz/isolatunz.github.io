@@ -85,7 +85,10 @@ nav {
     color: #555;
 }
 
-button {
+button,
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
     margin-top: 25px;
     background: #3971b8;
     color: white;
