@@ -71,10 +71,9 @@ nav {
     align-items: center;
     padding: 80px;
     min-height: 70vh;
-    background: #ffffff;
+    background: transparent; /* Changed from #ffffff to transparent */
     border-bottom: 1px solid #e2e8f0;
 }
-
 .hero-text {
     max-width: 500px;
 }
