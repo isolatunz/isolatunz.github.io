@@ -150,7 +150,10 @@ button:hover,
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(57, 113, 184, 0.12);
+    border-color: #3971b8;
+    /* Soft blue & green layered glow */
+    box-shadow: 0 12px 30px rgba(57, 113, 184, 0.25), 
+                0 0 15px rgba(200, 214, 155, 0.4);
 }
 
 .card:active {
@@ -368,4 +371,31 @@ li {
     background: white;
     padding: 30px;
     border-radius: 25px;
-    box-shadow
+    box-shadow 
+}
+/* =========================
+   FOOTER & CARD HOVER
+========================= */
+
+footer,
+.footer {
+    text-align: center !important;
+    padding: 50px 20px;
+    margin-top: 80px;
+    border-top: 1px solid #e2e8f0;
+    width: 100%;
+}
+
+footer p,
+.footer p {
+    text-align: center !important;
+    margin: 6px 0;
+}
+
+/* Glowing border when hovering/touching cards */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #3971b8;
+    box-shadow: 0 12px 30px rgba(57, 113, 184, 0.25), 
+                0 0 15px rgba(200, 214, 155, 0.4);
+}
