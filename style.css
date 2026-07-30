@@ -399,3 +399,14 @@ footer p,
     box-shadow: 0 12px 30px rgba(57, 113, 184, 0.25), 
                 0 0 15px rgba(200, 214, 155, 0.4);
 }
+/* Remove top borders from cards */
+.card {
+    border-top: none !important;
+}
+
+/* Hide extra headings on other pages */
+.about-page h1,
+.resources-page h1,
+.programs-page h1 {
+    display: none;
+}
