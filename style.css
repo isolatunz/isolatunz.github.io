@@ -117,20 +117,21 @@ button:hover {
 ========================= */
 
 .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .card {
     background: white;
     padding: 40px;
     border-radius: 30px;
-    width: 340px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    transition: .3s;
+
+    width: auto;      /* remove width: 340px */
+    height: 100%;
 }
+
 
 .card h3 {
     font-size: 1.4rem;
