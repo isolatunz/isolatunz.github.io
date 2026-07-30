@@ -477,3 +477,50 @@ footer p,
         width: 100% !important;
     }
 }
+/* =========================
+   PROGRAM CARDS LAYOUT FIX
+========================= */
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch; /* Makes all cards the exact same height */
+}
+
+/* Force cards to flex vertically so buttons sit at the bottom */
+.program-item,
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 25px;
+    height: 100%;
+}
+
+/* Keep the logos clean and centered */
+.program-logo {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* Space out the status pill and the Learn More button */
+.status-open,
+.status-soon,
+.status-closed {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+/* Ensure Learn More button sits neatly at the bottom */
+.program-link,
+.card a.hero-btn {
+    margin-top: auto !important; /* Forces button to align at bottom */
+    display: inline-block;
+    width: fit-content;
+}
