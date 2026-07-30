@@ -410,3 +410,70 @@ footer p,
 .programs-page h1 {
     display: none;
 }
+/* =========================
+   MOBILE FIXES (PHONES ONLY)
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Reduce huge side margins so content fits on screen */
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 40px 20px !important;
+    }
+
+    nav {
+        padding: 20px !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin-left: 0 !important;
+    }
+
+    /* Stack hero elements neatly */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px !important;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-shape {
+        width: 200px !important;
+        height: 200px !important;
+        margin: 30px auto 0 !important;
+    }
+
+    /* Force all card grids into 1 single column */
+    .cards, 
+    .about-cards, 
+    .resource-grid,
+    .programs-grid {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .card, 
+    .program-item, 
+    .resource-card {
+        width: 100% !important;
+    }
+}
