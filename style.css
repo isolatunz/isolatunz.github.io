@@ -9,17 +9,13 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    
-    /* Locks the gradient to the screen window so page length never changes its scale */
     background: linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
-    background-attachment: fixed;
-    
+    background-attachment: fixed; /* Keeps the gradient smooth above the footer */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: #222;
 }
-
 section {
     padding: 80px;
     background: transparent;
@@ -324,10 +320,13 @@ section {
 ========================= */
 
 .footer {
-    background: transparent; /* Seamless blend into gradient */
+    background: #ffffff; /* Solid white background behind footer content */
+    border-top: 1px solid #e2e8f0; /* Soft line separating gradient from footer */
     text-align: center;
     padding: 60px 20px;
-    margin-top: auto; /* Keeps footer pinned to the bottom */
+    margin-top: auto; /* Pushes footer to the bottom of shorter pages */
+    position: relative; /* Ensures it sits cleanly on top of the page background */
+    z-index: 2;
 }
 
 .footer h3 {
