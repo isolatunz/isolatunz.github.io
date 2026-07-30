@@ -129,26 +129,34 @@ button:hover,
    CARDS & OFFERS
 ========================= */
 
-.offers-section {
+/* Ensure the section fully encompasses its floating/grid children */
+.offers-section, 
+section {
+    padding: 80px;
     background: transparent;
+    overflow: visible; /* Prevents card shadows from clipping while fixing height */
 }
 
-.cards {
+/* Ensure grid items don't stretch weirdly */
+.cards, 
+.resource-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    align-items: stretch; /* Keeps all cards aligned at equal height */
+    margin-bottom: 40px; /* Gives space so cards don't touch the bottom edge of the section */
 }
 
-.card {
+.card, 
+.resource-card {
     background: white;
     padding: 40px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    width: auto;      
-    height: 100%;
     border: 1px solid #e2e8f0; 
     box-sizing: border-box;
     transition: .3s;
+    height: auto; /* Changed from height: 100% to let content dictate card height cleanly */
 }
 
 .card h3 {
