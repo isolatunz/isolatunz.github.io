@@ -2,16 +2,11 @@
    GENERAL
 ========================= */
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background: #f6f6f3;
     color: #222;
-    overflow-x: hidden;
 }
 
 section {
@@ -78,8 +73,8 @@ nav {
 }
 
 .hero h1 {
-    font-size: 5rem;
-    line-height: 1;
+    font-size: 6rem;
+    line-height: .95;
     margin: 0;
     font-weight: 800;
 }
@@ -110,10 +105,9 @@ button:hover,
     transform: translateY(-3px);
 }
 
-/* Big Hero Gradient Circle */
 .hero-shape {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     background: linear-gradient(
         135deg,
@@ -124,7 +118,7 @@ button:hover,
 }
 
 /* =========================
-   CARDS & HOVER/CLICK BORDER
+   CARDS
 ========================= */
 
 .cards {
@@ -137,12 +131,12 @@ button:hover,
     background: white;
     padding: 40px;
     border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.04);
-    width: 100%;      
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+    width: auto;      
     height: 100%;
-    border: 2px solid transparent; /* Keeps border smooth during click/hover */
-    transition: all .2s ease-in-out;
-    cursor: pointer;
+    border: 1px solid #e2e8f0; 
+    box-sizing: border-box;
+    transition: .3s;
 }
 
 .card h3 {
@@ -150,19 +144,436 @@ button:hover,
     margin-bottom: 10px;
 }
 
-/* Glowing border when hovering or clicking the card */
-.card:hover,
-.card:active,
-.card:focus {
-    transform: translateY(-6px);
+.card:hover {
+    transform: translateY(-8px);
     border-color: #3971b8;
-    box-shadow: 0 0 15px rgba(57, 113, 184, 0.35), 
-                0 0 25px rgba(200, 214, 155, 0.45);
+    box-shadow: 0 15px 35px rgba(57, 113, 184, 0.12);
 }
 
 .card:active {
     transform: scale(.98);
-    border-color: #c8d69b; /* Highlights green on exact press/click */
 }
 
 .program-logo {
+    height: 120px;
+    width: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.about-cards .card {
+    width: auto;
+    min-height: 220px;
+}
+
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 80px 80px 80px;
+}
+
+.about-page h1 {
+    font-size: 5rem;
+    line-height: .95;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.about-page h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+}
+
+.about-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-intro {
+    max-width: 750px;
+}
+
+.search-bar {
+    width: 500px;
+    max-width: 100%;
+    padding: 16px 25px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    margin: 20px auto 40px;
+    display: block;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #3971b8;
+}
+
+/* =========================
+   PROGRAMS PAGE
+========================= */
+
+.programs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.program-item {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+    width: 320px;
+    transition: .3s;
+}
+
+.program-item:hover {
+    transform: translateY(-8px);
+}
+
+.program-item:active {
+    transform: scale(.98);
+}
+
+.program-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #3971b8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.resource-card .program-link {
+    width: fit-content;
+    align-self: flex-start;
+}
+
+.program-link:hover {
+    opacity: .9;
+}
+
+/* Status Tags */
+
+.status-open,
+.status-soon,
+.status-closed {
+    color: white;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.status-open {
+    background: #2e8b57;
+}
+
+.status-soon {
+    background: #d4a017;
+}
+
+.status-closed {
+    background: #d9534f;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 80px;
+    border-top: 1px solid #ddd;
+}
+
+.footer h3 {
+    color: #3971b8;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #555;
+    margin: 8px 0;
+}
+
+/* =========================
+   RESOURCE LINKS
+========================= */
+
+.resource-topic {
+    display: block;
+    margin-bottom: 12px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-topic:hover {
+    color: #3971b8;
+}
+
+.resource-cards .card {
+    width: 350px;
+}
+
+.categories button {
+    background: white;
+    color: #3971b8;
+    border: 1px solid #3971b8;
+}
+
+.categories button.active {
+    background: #3971b8;
+    color: white;
+}
+
+/* =========================
+   ARTICLE & SUPPORT
+========================= */
+
+.article-banner {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 20px;
+    margin: 25px auto 40px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.support-box {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 650px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    border-left: 5px solid #6EA8FF;
+}
+
+.support-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+}
+
+.support-box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.anxiety-list li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+ul {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.section-divider {
+    border: none;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        #3971b8,
+        #c8d69b
+    );
+    margin: 50px 0;
+    border-radius: 999px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.05);
+    transition: .3s;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.resource-card p {
+    color: #555;
+    line-height: 1.7;
+    flex-grow: 1;
+}
+
+.resource-card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background: #3971b8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.back-button {
+    margin-top: 70px;
+}
+
+.ending-message {
+    text-align: center;
+    max-width: 700px;
+    margin: 100px auto 30px;
+}
+
+.ending-message p {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.about-banner {
+    text-align: center;
+}
+
+.about-banner img {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .nav-links a {
+        font-size: .9rem;
+        margin-left: 12px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .hero-shape {
+        width: 250px;
+        height: 250px;
+        margin-top: 60px;
+    }
+
+    .about-page {
+        padding: 30px 20px;
+    }
+
+    .about-page h1 {
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+
+    .about-page h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .program-item {
+        width: 100%;
+    }
+
+    .nyu-logo {
+        height: 80px;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .support-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
