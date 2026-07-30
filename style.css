@@ -156,6 +156,17 @@ button:hover {
 /* =========================
    ABOUT PAGE
 ========================= */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.about-cards .card {
+    width: auto;
+    min-height: 220px;
+}
 
 .about-page {
     max-width: 1200px;
@@ -381,6 +392,9 @@ button:hover {
     .cards {
         justify-content: center;
     }
+   .about-cards {
+    grid-template-columns: 1fr;
+}
 
     .card {
         width: 100%;
