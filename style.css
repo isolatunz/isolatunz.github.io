@@ -18,7 +18,7 @@ body {
 
 section {
     padding: 80px;
-    background: transparent; /* Ensures the body gradient shows through */
+    background: transparent;
 }
 
 .small-title {
@@ -72,9 +72,10 @@ nav {
     align-items: center;
     padding: 80px;
     min-height: 70vh;
-    background: transparent; /* Changed from #ffffff to transparent */
-    border-bottom: 1px solid #e2e8f0;
+    background: transparent;
+    /* Border removed so no gray line splits your background */
 }
+
 .hero-text {
     max-width: 500px;
 }
@@ -125,8 +126,12 @@ button:hover,
 }
 
 /* =========================
-   CARDS
+   CARDS & OFFERS
 ========================= */
+
+.offers-section {
+    background: transparent;
+}
 
 .cards {
     display: grid;
@@ -307,11 +312,10 @@ button:hover,
 ========================= */
 
 .footer {
-    background: white;
+    background: transparent; /* Seamless blend into gradient */
     text-align: center;
     padding: 60px 20px;
-    margin-top: 80px;
-    border-top: 1px solid #ddd;
+    margin-top: auto; /* Keeps footer pinned to the bottom */
 }
 
 .footer h3 {
