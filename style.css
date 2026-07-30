@@ -9,7 +9,11 @@ html {
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    
+    /* Locks the gradient to the screen window so page length never changes its scale */
     background: linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
+    background-attachment: fixed;
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
