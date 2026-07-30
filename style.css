@@ -110,6 +110,7 @@ button:hover,
     transform: translateY(-3px);
 }
 
+/* Big Hero Gradient Circle */
 .hero-shape {
     width: 400px;
     height: 400px;
@@ -123,7 +124,7 @@ button:hover,
 }
 
 /* =========================
-   CARDS
+   CARDS & HOVER/CLICK BORDER
 ========================= */
 
 .cards {
@@ -139,8 +140,9 @@ button:hover,
     box-shadow: 0 10px 30px rgba(0,0,0,.04);
     width: 100%;      
     height: 100%;
-    border: 1px solid #e2e8f0; 
-    transition: all .3s ease;
+    border: 2px solid transparent; /* Keeps border smooth during click/hover */
+    transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 .card h3 {
@@ -148,7 +150,19 @@ button:hover,
     margin-bottom: 10px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+/* Glowing border when hovering or clicking the card */
+.card:hover,
+.card:active,
+.card:focus {
+    transform: translateY(-6px);
     border-color: #3971b8;
-    box-shadow: 0 15px 35px rgba(57,
+    box-shadow: 0 0 15px rgba(57, 113, 184, 0.35), 
+                0 0 25px rgba(200, 214, 155, 0.45);
+}
+
+.card:active {
+    transform: scale(.98);
+    border-color: #c8d69b; /* Highlights green on exact press/click */
+}
+
+.program-logo {
