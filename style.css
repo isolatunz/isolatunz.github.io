@@ -1,5 +1,4 @@
 
-
 /* =========================
    GENERAL
 ========================= */
@@ -66,8 +65,8 @@ nav {
     align-items: center;
     padding: 80px;
     min-height: 70vh;
-    background: #ffffff; /* Fresh white top section */
-    border-bottom: 1px solid #e2e8f0; /* Crisp divider line */
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .hero-text {
@@ -102,7 +101,8 @@ button,
     transition: .3s;
 }
 
-button:hover {
+button:hover,
+.hero-btn:hover {
     transform: translateY(-3px);
 }
 
@@ -115,8 +115,9 @@ button:hover {
         #3971b8,
         #c8d69b
     );
-    box-shadow: 0 25px 50px -12px rgba(57, 113, 184, 0.3); /* Colored depth shadow */
+    box-shadow: 0 25px 50px -12px rgba(57, 113, 184, 0.3);
 }
+
 /* =========================
    CARDS
 ========================= */
@@ -134,12 +135,10 @@ button:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
     width: auto;      
     height: 100%;
-
-    /* ADD THESE TWO LINES BELOW TO MAKE THE CARDS STAND OUT: */
     border: 1px solid #e2e8f0; 
     box-sizing: border-box;
+    transition: .3s;
 }
-
 
 .card h3 {
     font-size: 1.4rem;
@@ -148,6 +147,8 @@ button:hover {
 
 .card:hover {
     transform: translateY(-8px);
+    border-color: #3971b8;
+    box-shadow: 0 15px 35px rgba(57, 113, 184, 0.12);
 }
 
 .card:active {
@@ -164,6 +165,7 @@ button:hover {
 /* =========================
    ABOUT PAGE
 ========================= */
+
 .about-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -203,6 +205,7 @@ button:hover {
 .about-intro {
     max-width: 750px;
 }
+
 .search-bar {
     width: 500px;
     max-width: 100%;
@@ -215,11 +218,11 @@ button:hover {
     margin: 20px auto 40px;
     display: block;
 }
+
 .search-bar:focus {
     outline: none;
     border-color: #3971b8;
 }
-
 
 /* =========================
    PROGRAMS PAGE
@@ -258,6 +261,7 @@ button:hover {
     border-radius: 50px;
     font-weight: 500;
 }
+
 .resource-card .program-link {
     width: fit-content;
     align-self: flex-start;
@@ -346,239 +350,13 @@ button:hover {
 }
 
 /* =========================
-   MOBILE
+   ARTICLE & SUPPORT
 ========================= */
 
-@media (max-width: 768px) {
-
-    nav {
-        padding: 20px;
-    }
-
-    .nav-links a {
-        font-size: .9rem;
-        margin-left: 12px;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero-description {
-        font-size: 1.1rem;
-    }
-
-    .hero-shape {
-        width: 250px;
-        height: 250px;
-        margin-top: 60px;
-    }
-
-    .about-page {
-        padding: 30px 20px;
-    }
-
-    .about-page h1 {
-        font-size: 2.3rem;
-        line-height: 1.1;
-    }
-
-    .about-page h2 {
-        font-size: 2rem;
-    }
-
-    .cards {
-        justify-content: center;
-    }
-   .about-cards {
-    grid-template-columns: 1fr;
-}
-
-    .card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .program-item {
-        width: 100%;
-    }
-
-    .nyu-logo {
-        height: 80px;
-    }
-}
 .article-banner {
     width: 100%;
     max-width: 1200px;
     border-radius: 20px;
     margin: 25px auto 40px;
     display: block;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-.support-box {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    max-width: 650px;
-    margin: 40px 0;
-   
-    display: flex;
-    align-items: center;
-    gap: 20px;
-   
-    box-shadow: 0 8px 25px rgba(0,0,0,.05);
-    border-left: 5px solid #6EA8FF;
-}
-
-.support-icon {
-    width: 55px;
-    height: 55px;
-    flex-shrink: 0;
-}
-
-.support-box h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-.anxiety-list li {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-}
-ul {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-top: 15px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-.section-divider {
-    border: none;
-    height: 4px;
-    background: linear-gradient(
-        90deg,
-        #3971b8,
-        #c8d69b
-    );
-    margin: 50px 0;
-    border-radius: 999px;
-}
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.resource-card {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    transition: .3s;
-}
-
-.resource-card:hover {
-    transform: translateY(-5px);
-}
-
-.resource-card h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.resource-card p {
-    color: #555;
-    line-height: 1.7;
-}
-.resource-card a {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    background: #3971b8;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 500;
-}
-.resource-card {
-    height: 100%;
-}
-.back-button {
-    margin-top: 70px;
-}
-.resource-card {
-    background: white;
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.05);
-
-   min-height: 40px;
-   display: flex;
-   flex-direction: column;
-}
-.resource-card p {
-   flex-grow: 1;
-}
-.ending-message{
-    text-align: center;
-    max-width: 700px;
-    margin: 100px auto 30px;
-}
-
-
-.ending-message p{
-    max-width: 500px;
-    margin: 0 auto;
-}
-.about-banner {
-    text-align: center;
-}
-
-.about-banner img {
-    width: 100%;
-    max-width: 1200px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-
-/* your current css */
-
-/* MOBILE FIXES FOR ANXIETY PAGE */
-@media (max-width: 768px) {
-
-    .resource-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .resource-card {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .support-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logo img {
-        width: 60px;
-    }
-
 }
