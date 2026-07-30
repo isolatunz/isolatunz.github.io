@@ -85,6 +85,11 @@ nav {
     line-height: .95;
     margin: 0;
     font-weight: 800;
+    background: linear-gradient(135deg, #3971b8, #2e8b57, #3971b8);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite;
 }
 
 .hero-description {
