@@ -66,6 +66,8 @@ nav {
     align-items: center;
     padding: 80px;
     min-height: 70vh;
+    background: #ffffff; /* Fresh white top section */
+    border-bottom: 1px solid #e2e8f0; /* Crisp divider line */
 }
 
 .hero-text {
@@ -113,8 +115,8 @@ button:hover {
         #3971b8,
         #c8d69b
     );
+    box-shadow: 0 25px 50px -12px rgba(57, 113, 184, 0.3); /* Colored depth shadow */
 }
-
 /* =========================
    CARDS
 ========================= */
@@ -130,9 +132,12 @@ button:hover {
     padding: 40px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
-
-    width: auto;      /* remove width: 340px */
+    width: auto;      
     height: 100%;
+
+    /* ADD THESE TWO LINES BELOW TO MAKE THE CARDS STAND OUT: */
+    border: 1px solid #e2e8f0; 
+    box-sizing: border-box;
 }
 
 
