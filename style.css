@@ -560,11 +560,17 @@ li {
    COMING SOON BADGES
 ========================= */
 
-.coming-soon-text {
-    font-size: 0.85rem;
-    color: #94a3b8; /* Subtle gray tint */
-    font-weight: 400;
-    margin-left: 6px;
+.card-status {
+    display: inline-block;
+    background: #fef3c7;
+    color: #b45309;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 /* Optional styling to make unfinished resource items look inactive */
 .resource-topic.disabled {
