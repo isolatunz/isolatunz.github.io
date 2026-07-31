@@ -556,6 +556,31 @@ li {
     margin: 0 auto;
     border-radius: 20px;
 }
+/* =========================
+   COMING SOON BADGES
+========================= */
+
+.coming-soon-badge {
+    display: inline-block;
+    background: #fef3c7;          /* Soft gold background that matches your theme */
+    color: #b45309;               /* Warm bronze/amber text */
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(180, 83, 9, 0.1);
+}
+
+/* Optional styling to make unfinished resource items look inactive */
+.resource-topic.disabled {
+    color: #888;
+    cursor: default;
+    pointer-events: none; /* Prevents clicking while still under construction */
+}
 
 /* =========================
    MOBILE
