@@ -557,3 +557,59 @@ li {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
     border: 1px solid rgba(255, 2
+   /* =========================
+   MOBILE RESPONSIVE STYLES
+========================= */
+
+@media screen and max-width: 768px {
+
+    /* 1. Reset container padding for small screens */
+    section,
+    .hero,
+    .about-page,
+    .programs-page,
+    .offers-section {
+        padding: 40px 20px;
+    }
+
+    /* 2. Navigation adjustment */
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+    }
+
+    /* 3. Scale down huge headings */
+    .hero h1,
+    .about-page h1,
+    .programs-page h1 {
+        font-size: 3rem;
+    }
+
+    /* 4. Switch cards layout to a single column */
+    .cards,
+    .about-cards,
+    .resource-grid {
+        grid-template-columns: 1fr; /* Stacks cards 1-by-1 vertically */
+        gap: 20px;
+    }
+
+    /* 5. Make search bar fit phone screens */
+    .search-bar {
+        width: 100%;
+    }
+
+    /* 6. Mobile spacing for categories */
+    .categories {
+        gap: 8px;
+    }
+
+    .categories button {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
