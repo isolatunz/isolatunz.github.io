@@ -216,7 +216,25 @@ button:hover,
     border: 1px solid rgba(255, 255, 255, 0.9); 
     box-sizing: border-box;
     transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    height: auto;
+    
+    /* NEW: Turn the card into a flex column so children can push down */
+    display: flex;
+    flex-direction: column;
+}
+/* Make card-content fill all available space */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Automatically push status badges and links to the bottom */
+.program-link, 
+.status-open, 
+.status-closed,
+.status-soon {
+    margin-top: auto;
+    align-self: flex-start; /* Keeps buttons aligned nicely to the left */
 }
 
 .card h3 {
