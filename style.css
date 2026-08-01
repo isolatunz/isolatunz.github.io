@@ -650,4 +650,20 @@ li {
     h2 {
         font-size: 1.5rem;
     }
+/* Programs Page Mobile Specifics */
+.programs-grid {
+    display: flex;
+    flex-direction: column; /* Stacks program items vertically */
+    width: 100%;
+    gap: 20px;
+}
+
+.program-item {
+    width: 100% !important; /* Overrides the fixed 320px width */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.search-bar {
+    width: 100% !important; /* Makes the search bar fit mobile screens without spilling over */
 }
