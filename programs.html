@@ -43,7 +43,7 @@
     <input type="text" placeholder="Search programs..." class="search-bar" onkeyup="searchPrograms()">
     
     <div class="categories">
-        <button onclick="filterPrograms('all', this)">All</button>
+       <button class="active" onclick="filterPrograms('all', this)">All</button>
         <button onclick="filterPrograms('stem', this)">STEM</button>
         <button onclick="filterPrograms('college-prep', this)">College Prep</button>
         <button onclick="filterPrograms('jobs', this)">Jobs</button>
@@ -145,3 +145,50 @@
 
 </body>
 </html>
+<script>
+// Filter by Category
+function filterPrograms(category, buttonElement) {
+    // 1. Update active styling on buttons
+    const buttons = document.querySelectorAll('.categories button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    if (buttonElement) {
+        buttonElement.classList.add('active');
+    }
+
+    // 2. Filter the cards
+    const cards = document.querySelectorAll('.program-card');
+    cards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Clear search input when switching categories
+    document.querySelector('.search-bar').value = '';
+}
+
+// Search Bar Functionality
+function searchPrograms() {
+    const searchInput = document.querySelector('.search-bar').value.toLowerCase();
+    const cards = document.querySelectorAll('.program-card');
+
+    cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p').textContent.toLowerCase();
+
+        // Check if search term is in title or description
+        if (title.includes(searchInput) || description.includes(searchInput)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Reset button active state while typing
+    const buttons = document.querySelectorAll('.categories button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+}
+</script>
