@@ -217,19 +217,12 @@ button:hover,
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
-    
-    /* ADD THIS LINE HERE: */
     overflow-wrap: break-word; 
-
     transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
 }
-    
-    /* NEW: Turn the card into a flex column so children can push down */
-    display: flex;
-    flex-direction: column;
-}
+
 /* Make card-content fill all available space */
 .card-content {
     display: flex;
@@ -243,7 +236,7 @@ button:hover,
 .status-closed,
 .status-soon {
     margin-top: auto;
-    align-self: flex-start; /* Keeps buttons aligned nicely to the left */
+    align-self: flex-start;
 }
 
 .card h3 {
@@ -266,8 +259,10 @@ button:hover,
 .program-logo {
     height: 120px;
     width: auto;
+    max-width: 100%;
     display: block;
     margin: 0 auto 15px;
+    object-fit: contain;
 }
 
 /* =========================
@@ -394,11 +389,10 @@ button:hover,
 }
 
 /* Status Tags */
-/* Card Status Tag (For Resources Page) */
 .card-status {
     display: inline-block;
-    background-color: #fef9c3; /* Soft light yellow background */
-    color: #854d0e;            /* Dark brownish/yellow text */
+    background-color: #fef9c3;
+    color: #854d0e;
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -407,6 +401,7 @@ button:hover,
     margin-bottom: 12px;
     letter-spacing: 0.5px;
 }
+
 .status-open,
 .status-soon,
 .status-closed {
@@ -419,17 +414,9 @@ button:hover,
     margin-top: 10px;
 }
 
-.status-open {
-    background: #2e8b57;
-}
-
-.status-soon {
-    background: #d4a017;
-}
-
-.status-closed {
-    background: #d9534f;
-}
+.status-open { background: #2e8b57; }
+.status-soon { background: #d4a017; }
+.status-closed { background: #d9534f; }
 
 /* =========================
    FOOTER
@@ -558,22 +545,12 @@ li {
     opacity: 0.8;
 }
 
-.resource-card {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    border: 1px solid rgba(255, 2);
-   }
-   /* =========================
+/* =========================
    MOBILE RESPONSIVE STYLES
 ========================= */
 
 @media (max-width: 768px) {
 
-    /* 1. Global & Section Spacing Fixes */
     body {
         overflow-x: hidden;
     }
@@ -583,10 +560,9 @@ li {
     .offers-section,
     .about-page,
     .programs-page {
-        padding: 40px 20px !important; /* Reduces huge 80px side gaps */
+        padding: 40px 20px !important;
     }
 
-    /* 2. Navigation Fixes */
     nav {
         flex-direction: column;
         gap: 15px;
@@ -601,10 +577,9 @@ li {
     }
 
     .nav-links a {
-        margin-left: 0; /* Clears left-margin spacing on phone */
+        margin-left: 0;
     }
 
-    /* 3. Hero Section Fixes */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -616,7 +591,7 @@ li {
     }
 
     .hero h1 {
-        font-size: 2.8rem !important; /* Scaled down from 6rem so it fits cleanly */
+        font-size: 2.8rem !important;
     }
 
     .about-page h1,
@@ -625,24 +600,40 @@ li {
     }
 
     .hero-shape {
-        width: 250px; /* Scaled down floating shape so it doesn't push screen width */
+        width: 250px;
         height: 250px;
         margin-top: 30px;
     }
 
-    /* 4. Force ALL Grids to 1-Column Mobile Layout */
+    /* Force ALL Grids to 1-Column Mobile Layout */
     .cards,
     .resource-grid,
     .about-cards {
-        grid-template-columns: 1fr !important; /* Stack every card vertically */
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
         gap: 20px;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+    }
+
+    .cards .card,
+    .resource-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .program-item {
-        width: 100%; /* Allows program items to expand to screen width */
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
     }
 
-    /* 5. Article Banner & Elements Fixes */
     .article-banner {
         width: 100%;
         max-height: 200px;
@@ -659,40 +650,15 @@ li {
     h2 {
         font-size: 1.5rem;
     }
-/* Programs Page Mobile Specifics */
-.programs-grid {
-    display: flex;
-    flex-direction: column; /* Stacks program items vertically */
-    width: 100%;
-    gap: 20px;
-}
 
-.program-item {
-    width: 100% !important; /* Overrides the fixed 320px width */
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-.search-bar {
-    width: 100% !important; /* Makes the search bar fit mobile screens without spilling over */
-}
-   @media (max-width: 768px) {
-    /* Force the main cards container to stack cleanly on mobile */
-    .cards {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        padding: 0 !important;
+    .programs-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
     }
 
-    /* Force every individual card to fit the mobile screen width safely */
-    .cards .card {
+    .search-bar {
         width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
     }
 }
