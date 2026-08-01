@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.PNG">
-    <!-- Google tag (gtag.js) -->
+<link rel="icon" type="image/png" href="favicon.PNG">
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPCP1Z75M4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -19,208 +19,121 @@
 </script>
 </head>
 <body>
-<nav>
+
+<header>
     <div class="logo">
-    <img src="logo.png" alt="NextStepNYC Logo">
-</div>
-<div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="resources.html">Resources</a>
-    <a href="programs.html">Programs</a>
-    <a href="about.html">About</a>
-    
-</div>
-</nav>
-<section class="about-page">
-<p class="small-title" style="color:red;">Programs</p>
-<h1>Programs for NYC Teens</h1>
-<p>
-    Explore programs, internships, leadership opportunities
-    and experiences available to students across New York City.
-</p>
-    <input type="text" placeholder="Search programs..." class="search-bar" onkeyup="searchPrograms()">
-    <div class="categories">
-   <button onclick="filterPrograms('all', this)">All</button>
-<button onclick="filterPrograms('stem', this)">STEM</button>
-<button onclick="filterPrograms('college-prep', this)">College Prep</button>
-<button onclick="filterPrograms('jobs', this)">Jobs</button>
-<button onclick="filterPrograms('leadership', this)">Leadership</button>
-<button onclick="filterPrograms('volunteer', this)">Volunteer</button> 
-</div>
-<h2>Featured Programs</h2>
-    <p class="program-subtitle">
-Explore jobs, internships, college prep and volunteer opportunities.
-</p>
-    <div class="cards">
-<div class="card" data-category="jobs">
-    
-<img src="syep-logo.png" alt="SYEP Logo" class="program-logo">
- <h3>SYEP</h3>
-    <p>
-        Paid summer jobs and career development opportunities
-        for NYC youth ages 14–24.
-    </p>
-
-    <p class="status-closed">Closed • Reopens in Spring</p>
-
-    <a href="https://application.nycsyep.com" target="_blank" class="program-link">
-        Learn More
-    </a>
-</div>
-
-<div class="card" data-category="college-prep">
-    <img src="seo-logo.png" alt="SEO Scholars Logo" class="program-logo seo-logo">
-    <h3>SEO Scholars</h3>
-    <p>
-        A free 4-year college prep program that helps students prepare
-        for college and beyond.
-    </p>
-    <p><strong>Entry:</strong> 9th  </p>
-   <p><strong>75%</strong> of Scholars attend Top 100 colleges.</p>
-
-    <p class="status-open">Open</p>
-
-    <a href="https://www.seo-usa.org/scholars/" target="_blank" class="program-link">
-        Learn More
-    </a>
-</div>
-
-<div class="card" data-category="leadership">
-    <img src="nypl-logo.png" alt="NYPL Logo" class="program-logo">
-<h3>NYPL Teen Programs</h3>
-    <p>
-        Leadership, learning, internships and volunteer
-        opportunities for NYC teens.
-    </p>
-    <p><strong>Ages:</strong> 13–18</p>
-<p><strong>Cost:</strong> Free</p>
-
-    <p class="status-open">Open</p>
-
-    <a href="https://www.nypl.org/education/teens" target="_blank" class="program-link">
-        Learn More
-    </a>
-</div>
-    <div class="card" data-category="stem">
-        <img src="nyu-step-logo.png" alt="NYU STEP Logo" class="program-logo">
-        <h3>NYU STEP</h3>
-        <p>
-            STEM and college preperation program for highschool students. 
-        </p>
-        <p><strong> Ages:</strong> Grades 7-12</p>
-       <p><strong>Cost:</strong> Paid fee</p>
-        <p><strong>Catergory: </strong>STEM</p>
-
-<p class="status-open">Open</p>
-
-<a href="https://www.nyu.edu/admissions/high-school-and-middle-school-programs/high-school-programs/science-and-technology-entry-program.html"
-   target="_blank"
-   class="program-link">
-   Learn More
-</a>
-</div>
-      <div class="card" data-category="stem">
-    <img src="fordham-logo.png" alt="Fordham STEP Logo" class="program-logo">
-
-    <h3>Fordham STEP</h3>
-
-    <p>
-        A free STEM program that helps students prepare for college and careers in science, technology, engineering, math, health and other professional fields.
-    </p>
-
-    <p><strong>Grades:</strong> 7–12</p>
-
-    <p><strong>Cost:</strong> Free</p>
-
-    <p><strong>Category:</strong> STEM</p>
-
-    <p><strong>100%</strong> college acceptance rate.</p>
-
-    <p class="status-open">Open</p>
-
-    <a href="https://www.fordham.edu/academics/academic-resources/step/"
-       target="_blank"
-       class="program-link">
-       Learn More
-    </a>
-</div>
-    <div class="card" data-category="volunteer">
-         <img src="dnnimagehandler.ashx-removebg-preview.png" alt="Bronz Zoo Logo" class="program-logo dnnimagehandler">
-    <h3>Bronx Zoo Volunteer Program</h3>
-
-<p>
-    Volunteer at the Bronx Zoo while gaining leadership, public speaking skills and wildlife experience.
-</p>
-
-<p><strong>Ages:</strong> 14–17</p>
-
-<p><strong>Cost:</strong> Free</p>
-
-<p><strong>Category:</strong> Volunteer</p>
-
-<p class="status-open">Seasonal</p>
-
-<a href="https://bronxzoo.com/volunteering/discovery-guide-volunteer-program" 
-    target="_blank" 
-    class="program-link">
-    Learn More
-</a>
+        <img src="logo.png" alt="NextStepNYC Logo">
     </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="programs.html">Programs</a>
+        <a href="about.html">About</a>
+    </div>
+</header>
+
+<section class="about-page">
+    <p class="small-title" style="color:red;">Programs</p>
+    <h1>Programs for NYC Teens</h1>
+    <p>
+        Explore programs, internships, leadership opportunities
+        and experiences available to students across New York City.
+    </p>
+
+    <input type="text" placeholder="Search programs..." class="search-bar" onkeyup="searchPrograms()">
+    
+    <div class="categories">
+        <button onclick="filterPrograms('all', this)">All</button>
+        <button onclick="filterPrograms('stem', this)">STEM</button>
+        <button onclick="filterPrograms('college-prep', this)">College Prep</button>
+        <button onclick="filterPrograms('jobs', this)">Jobs</button>
+        <button onclick="filterPrograms('leadership', this)">Leadership</button>
+        <button onclick="filterPrograms('volunteer', this)">Volunteer</button> 
+    </div>
+
+    <h2>Featured Programs</h2>
+    <p class="program-subtitle">
+        Explore jobs, internships, college prep and volunteer opportunities.
+    </p>
+
+    <div class="cards">
+
+        <div class="card" data-category="jobs">
+            <img src="syep-logo.png" alt="SYEP Logo" class="program-logo">
+            <div class="card-content">
+                <h3>SYEP</h3>
+                <p>Paid summer jobs and career development opportunities for NYC youth ages 14–24.</p>
+                <p class="status-closed">Closed • Reopens in Spring</p>
+                <a href="https://application.nycsyep.com" target="_blank" class="program-link">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card" data-category="college-prep">
+            <img src="seo-logo.png" alt="SEO Scholars Logo" class="program-logo seo-logo">
+            <div class="card-content">
+                <h3>SEO Scholars</h3>
+                <p>A free 4-year college prep program that helps students prepare for college and beyond.</p>
+                <p><strong>Entry:</strong> 9th</p>
+                <p><strong>75%</strong> of Scholars attend Top 100 colleges.</p>
+                <p class="status-open">Open</p>
+                <a href="https://www.seo-usa.org/scholars/" target="_blank" class="program-link">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card" data-category="leadership">
+            <img src="nypl-logo.png" alt="NYPL Logo" class="program-logo">
+            <div class="card-content">
+                <h3>NYPL Teen Programs</h3>
+                <p>Leadership, learning, internships and volunteer opportunities for NYC teens.</p>
+                <p><strong>Ages:</strong> 13–18</p>
+                <p><strong>Cost:</strong> Free</p>
+                <p class="status-open">Open</p>
+                <a href="https://www.nypl.org/education/teens" target="_blank" class="program-link">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card" data-category="stem">
+            <img src="nyu-step-logo.png" alt="NYU STEP Logo" class="program-logo">
+            <div class="card-content">
+                <h3>NYU STEP</h3>
+                <p>STEM and college preparation program for high school students.</p>
+                <p><strong>Ages:</strong> Grades 7-12</p>
+                <p><strong>Cost:</strong> Paid fee</p>
+                <p><strong>Category:</strong> STEM</p>
+                <p class="status-open">Open</p>
+                <a href="https://www.nyu.edu/admissions/high-school-and-middle-school-programs/high-school-programs/science-and-technology-entry-program.html" target="_blank" class="program-link">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card" data-category="stem">
+            <img src="fordham-logo.png" alt="Fordham STEP Logo" class="program-logo">
+            <div class="card-content">
+                <h3>Fordham STEP</h3>
+                <p>A free STEM program that helps students prepare for college and careers in science, tech, engineering, and math.</p>
+                <p><strong>Grades:</strong> 7–12</p>
+                <p><strong>Cost:</strong> Free</p>
+                <p><strong>Category:</strong> STEM</p>
+                <p><strong>100%</strong> college acceptance rate.</p>
+                <p class="status-open">Open</p>
+                <a href="https://www.fordham.edu/academics/academic-resources/step/" target="_blank" class="program-link">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card" data-category="volunteer">
+            <img src="dnnimagehandler.ashx-removebg-preview.png" alt="Bronx Zoo Logo" class="program-logo dnnimagehandler">
+            <div class="card-content">
+                <h3>Bronx Zoo Volunteer Program</h3>
+                <p>Volunteer at the Bronx Zoo while gaining leadership, public speaking skills and wildlife experience.</p>
+                <p><strong>Ages:</strong> 14–17</p>
+                <p><strong>Cost:</strong> Free</p>
+                <p><strong>Category:</strong> Volunteer</p>
+                <p class="status-open">Seasonal</p>
+                <a href="https://bronxzoo.com/volunteering/discovery-guide-volunteer-program" target="_blank" class="program-link">Learn More</a>
+            </div>
+        </div>
+
     </div>
 </section>
+
 <footer class="footer">
-<h3>NextStepNYC</h3>
-<p>Helping NYC teens find their next step.</p>
-<p>📧 officialnsnyc@gmail.com</p>
-<p>📸 @officialNSNYC</p>
-<p>© 2026 NextStepNYC</p>
-</footer>
-    <script>
-        function searchPrograms() {
-
-    let input = document.querySelector('.search-bar');
-    let filter = input.value.toLowerCase();
-
-    let cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-
-        let text = card.textContent.toLowerCase();
-
-        if (text.includes(filter)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-
-    });
-
-}
-function filterPrograms(category, button) {
-
-    let cards = document.querySelectorAll('.card');
-    let buttons = document.querySelectorAll('.categories button');
-
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-    });
-
-    button.classList.add('active');
-
-    cards.forEach(card => {
-
-        if (
-            category === 'all' ||
-            card.dataset.category === category
-        ) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-
-    });
-
-}
-</script>
-</body>
-</html>
+    <h3>NextStep
