@@ -676,3 +676,23 @@ li {
 .search-bar {
     width: 100% !important; /* Makes the search bar fit mobile screens without spilling over */
 }
+   @media (max-width: 768px) {
+    /* Force the main cards container to stack cleanly on mobile */
+    .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+    }
+
+    /* Force every individual card to fit the mobile screen width safely */
+    .cards .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
