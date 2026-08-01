@@ -2,12 +2,19 @@
    GENERAL
 ========================= */
 
-html {
+* {
+    box-sizing: border-box;
+}
+
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #ffffff 0%, #eef4fb 100%);
     background-attachment: fixed;
@@ -20,6 +27,8 @@ body {
 section {
     padding: 80px;
     background: transparent;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .small-title {
@@ -47,6 +56,8 @@ nav {
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(226, 232, 240, 0.8);
     transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -178,8 +189,7 @@ button:hover,
    CARDS & OFFERS
 ========================= */
 
-.offers-section, 
-section {
+.offers-section {
     padding: 80px;
     background: transparent;
     overflow: visible;
@@ -192,6 +202,7 @@ section {
     gap: 25px;
     align-items: stretch;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .card, 
@@ -233,8 +244,17 @@ section {
 }
 
 /* =========================
-   ABOUT PAGE
+   PAGES (About & Programs)
 ========================= */
+
+.about-page,
+.programs-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 80px 80px 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .about-cards {
     display: grid;
@@ -248,25 +268,22 @@ section {
     min-height: 220px;
 }
 
-.about-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 80px 80px 80px;
-}
-
-.about-page h1 {
+.about-page h1,
+.programs-page h1 {
     font-size: 5rem;
     line-height: .95;
     font-weight: 800;
     margin-bottom: 25px;
 }
 
-.about-page h2 {
+.about-page h2,
+.programs-page h2 {
     font-size: 2rem;
     margin-top: 60px;
 }
 
-.about-page p {
+.about-page p,
+.programs-page p {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #555;
@@ -288,6 +305,7 @@ section {
     margin: 20px auto 40px;
     display: block;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .search-bar:focus {
@@ -386,6 +404,8 @@ section {
     margin-top: auto;
     position: relative;
     z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer h3 {
@@ -415,11 +435,6 @@ section {
     color: #3971b8;
 }
 
-.resource-cards .card {
-    width: 350px;
-}
-
-/* Added container flex wrapping for categories on mobile */
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -434,7 +449,7 @@ section {
     color: #3971b8;
     border: 1px solid #3971b8;
     transition: all 0.3s ease;
-    margin-top: 0; /* Keeps spacing consistent in flex layout */
+    margin-top: 0;
 }
 
 .categories button.active {
@@ -511,200 +526,4 @@ li {
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    transition: all .3s ease;
-    min-height: 40px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.resource-card h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.resource-card p {
-    color: #555;
-    line-height: 1.7;
-    flex-grow: 1;
-}
-
-.resource-card a {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    background: #3971b8;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 500;
-}
-
-.back-button {
-    margin-top: 70px;
-}
-
-.ending-message {
-    text-align: center;
-    max-width: 700px;
-    margin: 100px auto 30px;
-}
-
-.ending-message p {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.about-banner {
-    text-align: center;
-}
-
-.about-banner img {
-    width: 100%;
-    max-width: 1200px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-
-/* =========================
-   COMING SOON BADGES
-========================= */
-
-.card-status {
-    display: inline-block;
-    background: #fef3c7;
-    color: #b45309;
-    font-size: 0.7rem;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 50px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.resource-topic.disabled {
-    color: #888;
-    cursor: default;
-    pointer-events: none;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-        position: relative;
-    }
-
-    .logo img {
-        width: 60px;
-    }
-
-    .nav-links a {
-        font-size: .9rem;
-        margin-left: 12px;
-        margin-right: 12px;
-    }
-
-    section {
-        padding: 40px 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero-description {
-        font-size: 1.1rem;
-    }
-
-    .hero-shape {
-        width: 250px;
-        height: 250px;
-        margin-top: 40px;
-    }
-
-    .cards,
-    .about-cards,
-    .resource-grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-
-    .about-page {
-        padding: 30px 20px;
-    }
-
-    .about-page h1 {
-        font-size: 2.3rem;
-        line-height: 1.1;
-    }
-
-    .about-page h2 {
-        font-size: 2rem;
-    }
-
-    .card,
-    .resource-card,
-    .program-item {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .nyu-logo {
-        height: 80px;
-    }
-
-    /* Fixed: Added missing closing brace here */
-    .support-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* Converts cards to horizontal rows on mobile */
-    .program-card {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 16px;
-        gap: 15px;
-        text-align: left;
-    }
-
-    /* Small logo on the left */
-    .card-logo {
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-        flex-shrink: 0;
-        margin-bottom: 0;
-    }
-
-    .program-card-content {
-        flex: 1;
-    }
-
-    .program-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 4px;
-    }
-
-    .program-card p {
-        font-size: 0.85rem;
-        margin-bottom: 8px;
-    }
-}
+    border: 1px solid rgba(255, 2
