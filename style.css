@@ -367,6 +367,19 @@ button:hover,
 }
 
 /* Status Tags */
+/* Card Status Tag (For Resources Page) */
+.card-status {
+    display: inline-block;
+    background: #d4a017;       /* Matching your status-soon yellow/gold */
+    color: #ffffff;            /* White text */
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
 
 .status-open,
 .status-soon,
