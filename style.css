@@ -556,41 +556,98 @@ li {
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    border: 1px solid rgba(255, 2
+    border: 1px solid rgba(255, 2);
+   }
    /* =========================
    MOBILE RESPONSIVE STYLES
 ========================= */
 
-/* --- Mobile Responsive Styles --- */
 @media (max-width: 768px) {
+
+    /* 1. Global & Section Spacing Fixes */
     body {
         overflow-x: hidden;
-        padding: 0 15px;
     }
 
+    section,
+    .hero,
+    .offers-section,
+    .about-page,
+    .programs-page {
+        padding: 40px 20px !important; /* Reduces huge 80px side gaps */
+    }
+
+    /* 2. Navigation Fixes */
     nav {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 0;
+        padding: 15px 20px;
     }
 
     .nav-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
-    }
-
-    .resource-grid {
-        grid-template-columns: 1fr !important;
         gap: 15px;
     }
 
+    .nav-links a {
+        margin-left: 0; /* Clears left-margin spacing on phone */
+    }
+
+    /* 3. Hero Section Fixes */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem !important; /* Scaled down from 6rem so it fits cleanly */
+    }
+
+    .about-page h1,
+    .programs-page h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-shape {
+        width: 250px; /* Scaled down floating shape so it doesn't push screen width */
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    /* 4. Force ALL Grids to 1-Column Mobile Layout */
+    .cards,
+    .resource-grid,
+    .about-cards {
+        grid-template-columns: 1fr !important; /* Stack every card vertically */
+        gap: 20px;
+    }
+
+    .program-item {
+        width: 100%; /* Allows program items to expand to screen width */
+    }
+
+    /* 5. Article Banner & Elements Fixes */
     .article-banner {
-        max-height: 180px;
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        margin: 15px 0 25px 0;
+    }
+
+    .support-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
     }
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 }
