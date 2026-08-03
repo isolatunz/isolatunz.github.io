@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://nextstepnyc.org/</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/stress.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/confidence.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/friendships.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/anxiety.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/programs.html</loc>
+  </url>
+
+  <url>
+    <loc>https://nextstepnyc.org/resources.html</loc>
   </url>
 
 </urlset>
